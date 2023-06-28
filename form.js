@@ -2,6 +2,7 @@ var exp = require("express");
 var app = exp();
 var bp = require("body-parser");
 app.use(bp.json());
+app.use(express.static(path.join(__dirname,'public')));
 app.use(bp.urlencoded({ extended: true }));
 app.get("/getform", function (req, res) {
   res.sendFile(__dirname + "/form.html");
