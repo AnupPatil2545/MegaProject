@@ -1,6 +1,7 @@
 var exp = require("express");
 var app = exp();
 var bp = require("body-parser");
+var path=require("path");
 app.use(bp.json());
 app.use(exp.static(path.join(__dirname,'public')));
 app.use(bp.urlencoded({ extended: true }));
